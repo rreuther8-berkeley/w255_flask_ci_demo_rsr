@@ -10,10 +10,11 @@ jobs:
     strategy:
       fail-fast: false # if any set of tests fail, exit immediately. Doesn't give full error list
       matrix:
-        python-version: [3.8]
+        python-version: [3.7, 3.8]
 
     steps:
     - uses: actions/checkout@v2
+
     # install python
     - name: Setup Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2

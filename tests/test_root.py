@@ -20,3 +20,9 @@ class UserTestCase(TestCase):
 		response = self.client.get("/", headers={"Content-Type": "application/json"},)
 
 		self.assertEqual(response.status_code, 200)
+
+    # this will fail because post would give us 405, not 200. This would fail the CI run.
+	# def test_root_response(self):
+	# 	response = self.client.post("/", headers={"Content-Type": "application/json"},)
+
+	# 	self.assertEqual(response.status_code, 200)
